@@ -24,18 +24,16 @@ const imageData = ()=>{
 }
 
 function App() {
-  // code here
-  const data = imageData();
-
-  return (
-    <div>
+  return(
+    <div className='App'>
       <h1>Kalvium Gallery</h1>
-      {data.map(item => (
-        <img key={item.id} src={item.img} alt="Elephant" />
-      ))}
+      <div className='Gallery'>
+        {imageData().map((e) => {
+          return <img src= {e.img} alt='img(i)' key={e.id} />;
+        })}
+      </div>
     </div>
   );
-
 }
 
 export default App;
